@@ -74,12 +74,33 @@ WSGI_APPLICATION = 'PlayPlay.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+
+# Database
+# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'datastorage_dev',
+        'USER': 'root',
+        'PASSWORD': '1q2w3e44',
+        # 'HOST':'localhost',
+        # 'PORT':'3306',
+        'HOST':'xxx.xxx.xxx.xxx',
+        'PORT':'3306',
+
+        # 'OPTIONS': {
+        #     "init_command": "SET GLOBAL max_connections = 100000",  # <-- The fix
+        # }
     }
 }
+
 
 
 # Password validation
